@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-4">
+    <h1 class="text-center">Sticker Shop</h1>
+    <p class="text-center">Explore nossos produtos e aproveite as ofertas!</p>
+     
+</div>
+<section id="promotions-list">
+    <div class="container py-5">
+        <div class="row">
+            {% for promotion in promotions %}
+            <div class="col-md-4">
+                <div class="card">
+                    <img src="{{ promotion.imagem_url }}" alt="{{ promotion.title }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{promotion.title}}</h5>
+                        <p class="card-text">{{ promotion.description }}</p>
+                        <a href="{% url 'detail_promotion' promotion_id=promotion.id %}" class="btn btn-primary">Exibir Produto</a>
+                  
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

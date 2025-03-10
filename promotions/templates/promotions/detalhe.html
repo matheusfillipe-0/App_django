@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+ 
+
+{% block content %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'css/detalhe.css' %}">
+<a href="/" class="btn btn-secondary my-3">Voltar</a>
+
+    <img src="{{ promotion.imagem_url }}" alt="{{ promotion.title }}"  >
+    <h3 class="text-center" >{{ promotion.title }}</h3>  
+    <h4 class="text-center" >{{ promotion.description }}</h4>  
+
+{% endblock %}

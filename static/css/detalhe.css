@@ -1,0 +1,10 @@
+img {
+    width: 100%;  
+    max-width: 400px !important;  
+    height: auto;  
+    margin: 0 auto;  
+    display: block; 
+}
+h4,h3{
+    margin: 1%;
+}
